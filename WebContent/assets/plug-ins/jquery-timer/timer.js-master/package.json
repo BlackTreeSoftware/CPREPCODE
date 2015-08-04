@@ -1,0 +1,36 @@
+{
+  "name": "timer.js",
+  "version": "0.3.0",
+  "description": "Simple and lighweight but powerfull eventdriven JavaScript timer",
+  "main": "timer.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/husa/timer.js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/husa/timer.js/issues",
+    "email": "husnaj23@gmail.com"
+  },
+  "keywords": [
+    "timer.js",
+    "timer",
+    "time",
+    "measure",
+    "start",
+    "stop",
+    "pause"
+  ],
+  "author": {
+    "name": "Yuriy Husnay",
+    "email": "husnaj23@gmail.com"
+  },
+  "license": "MIT",
+  "readmeFilename": "readme.md",
+  "gitHead": "6c2c0f77f41b60e7af9bb92c6f0255fbb17dced4",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-compress": "~0.7.0"
+  }
+}

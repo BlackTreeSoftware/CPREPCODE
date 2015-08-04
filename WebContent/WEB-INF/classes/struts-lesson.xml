@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+
+	<package name="lessons" extends="struts" namespace="/"> 
+ 	
+ 		
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+		<!-- Lessons Start -->
+
+
+		<action name="Get-Lessons-List" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="lessonsSession">
+
+			<result name="success" type="tiles">/getLessonsList.tiles</result>
+		</action>
+		
+		<action name="LessonsList" class="com.greenbuds.crunchprep.action.lessons.LessonsViewingAction" method="lessonshirerachy"></action>
+		
+		
+		<action name="Get-Lesson">
+			<result name="success" type="tiles">/getLesson.tiles</result>
+		</action>
+		
+
+		<action name="lessonDetails" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="getLessonDetails">
+			<result name="success">/pages/user/lessons/lesson.jsp</result>
+		
+		</action>
+		
+		<action name="lessonsTaken" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="lessonsTaken"></action>
+		<action name="lessonsSession" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="lessonsSession"></action>
+
+		<action name="lessonaction" class="com.greenbuds.crunchprep.action.lessons.LessonsActionsAction" method="lessonsActions">
+			
+		</action>
+		
+
+		<!-- Lessons End -->
+		
+	
+		<!-- notes start -->
+		<action name="addNotes" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="addNotes"></action>
+		
+		<!-- notes End -->
+		
+		<!-- Bookmarks start -->
+		<action name="addBookMarks" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="addBookMarks"></action>
+		
+		<!-- Bookmarks End -->
+		 <action name="add-Lesson-ConfidenceLevel" class="com.greenbuds.crunchprep.action.lessons.LessonsAction" method="addNewConfidence">			
+		</action>
+		
+    </package>
+  
+  </struts>

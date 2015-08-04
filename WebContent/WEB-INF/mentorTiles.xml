@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    <tiles-definitions>
+	<definition name="adminLayout" template="/pages/layout/common-layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"  value="/pages/template/header.jsp" />
+		<put-attribute name="menu" value="/pages/template/adminmenu.jsp" />
+		<put-attribute name="body" value="/pages/template/body.jsp" />
+		<put-attribute name="footer" value="/pages/template/footer.jsp" />
+	</definition>
+	
+	
+	<definition name="/mentorAssignedStudentList.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorAssignedStudentList.jsp" />
+	</definition>
+	
+
+	<definition name="/studentProgressbar.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/studentProgressbar.jsp" />
+	</definition>
+
+	<definition name="/mentorStudentLogs.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorStudentDailyLogs.jsp" />
+	</definition>
+	
+	<definition name="/viewProgress.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorStudentProfile.jsp" />
+	</definition>
+	
+	<definition name="/mentorStudentList.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorStudentListFinal.jsp" />
+	</definition>
+	
+	<definition name="/viewSectionProgress.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/studentprogress.jsp" />
+	</definition>
+	
+	<definition name="/mentorStudentLogsList.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorStudentLogsList.jsp" />
+	</definition>
+	
+	<definition name="/mentorStudentActivity.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/mentor/mentorStudentActivity.jsp" />
+	</definition>
+	</tiles-definitions>

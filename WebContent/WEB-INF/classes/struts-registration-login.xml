@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+	<package name="registration_login" extends="struts">
+		<action name="userRegister"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="userRegister">
+			<result name="success">/pages/registration/email_verify.jsp</result>
+			<result name="error">/pages/registration/signup.jsp</result>
+		</action>
+
+		<action name="privacypolicy"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="getPrivacyPolicy">
+			<result name="success">/pages/registration/privacy_policy.jsp</result>
+		</action>
+		<action name="termsofuse"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="getTermsofUse">
+			<result name="success">/pages/registration/terms_of_use.jsp</result>
+		</action>
+
+		<action name="socialRegister"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="socialRegister">
+			<result name="success" type="redirectAction">personalProfile</result>
+			<result name="error">/pages/registration/signin.jsp</result>
+
+		</action>
+
+
+
+
+		<action name="forgotpwdmail"
+			class="com.greenbuds.crunchprep.action.registration.ForgotPasswordAction"
+			method="forgotPassword">
+			<!-- <result name="success">/pages/registration/forgot_password.jsp</result>
+			<result name="input">/pages/registration/forgot_password.jsp</result> -->
+		</action>
+
+		<action name="resetpassword"
+			class="com.greenbuds.crunchprep.action.registration.ForgotPasswordAction"
+			method="resetPassword">
+			<result name="success">/pages/registration/signin.jsp</result>
+			<result name="input">/pages/registration/forgot_password.jsp</result>
+		</action>
+		<action name="password_reset"
+			class="com.greenbuds.crunchprep.action.registration.ForgotPasswordAction"
+			method="tokenVerify">
+			<result name="error">/pages/registration/forgot_password.jsp</result>
+			<result name="success">/pages/registration/password_reset.jsp</result>
+		</action>
+		
+		<action name="referFriend" class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction" method="referFriend">
+			<result name="success" type="tiles">/referFriend.tiles</result>
+		</action>
+
+		<action name="vrpl" class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction" method="referFriend">
+			<result name="success">/pages/registration/vrpl.jsp</result>
+		</action>
+		
+
+
+
+
+ <action name="gmailcontacts" class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction" method="gmailContacts">
+			 
+		</action>
+
+ 
+ 
+ 
+		<!-- <action name="referFriend" >
+			<result >/pages/registration/friends.jsp</result>
+		</action> -->
+ 
+		<action name="loginuser"
+			class="com.greenbuds.crunchprep.action.registration.LoginAction"
+			method="loginUser" />
+
+
+ <action name="loginNavigation" class="com.greenbuds.crunchprep.action.registration.LoginAction" method="loginNavigation">
+		<result name="user" type="tiles">/WelcomePage.tiles</result>
+		<result name="admin" type="tiles">/AdminDashboard.tiles</result>
+		<result name="content creator" type="tiles">/AdminDashboard.tiles</result>
+		<result name="mentor" type="tiles">/AdminDashboard.tiles</result>
+		<result name="error" type="redirect">/pages/registration/signin.jsp</result>
+		<result name="subscription" >/pages/template/upgradeaccount.jsp</result>
+		<result name="inactive">/pages/registration/email_verify.jsp</result>
+		<!-- <result name="profile" >/pages/registration/personal_profile.jsp</result> -->
+		<result name="profile" type="chain">personalProfile</result>
+						 
+ </action>
+ 
+ <action name="logout" class="com.greenbuds.crunchprep.action.registration.LoginAction" method="logout">
+		<result name="success">/pages/registration/signin.jsp</result>
+		<result name="error"  type="tiles">/WelcomePage.tiles</result>
+						 
+ </action>
+
+
+		
+
+		
+
+
+		<!-- <action name="login" class="com.greenbuds.crunchprep.action.registration.LoginAction" 
+			method="loginUser"> <result name="success" type="tiles">/WelcomePage.tiles</result> 
+			</action> -->
+
+
+
+		<action name="sociallogin"
+			class="com.greenbuds.crunchprep.action.registration.LoginAction"
+			method="socialUser">
+			<result name="success" type="tiles">/WelcomePage.tiles</result>
+		</action>
+
+
+
+
+
+		<action name="personalProfile"
+			class="com.greenbuds.crunchprep.action.registration.PersonalProfileAction">
+			<result name="success">/pages/registration/personal_profile.jsp</result>
+			<result name="error">/pages/registration/signin.jsp</result>
+		</action>
+
+		<action name="savePersonalDetails"
+			class="com.greenbuds.crunchprep.action.registration.PersonalProfileAction"
+			method="savePersonalDetails">
+			<result name="success" type="tiles">/WelcomePage.tiles</result>
+			<result name="error">/pages/registration/personal_profile.jsp</result>
+		</action>
+		
+		 
+		<action name="updatelogincount" class="com.greenbuds.crunchprep.action.registration.LoginAction" method="skipOrDonelogincount"/>
+		<action name="tourcompletion" class="com.greenbuds.crunchprep.action.registration.LoginAction" method="tourCompletion"/>
+
+		<action name="verify"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="tokenVerification">
+			<result name="success" type="chain">personalProfile</result>
+			<result name="error">/pages/registration/signin.jsp</result>
+		</action>
+
+		<action name="generate"
+			class="com.greenbuds.crunchprep.action.registration.RegistrationAction"
+			method="tokenReGeneration">
+			<result name="success">/pages/registration/email_verify.jsp</result>
+			<result name="error">/pages/registration/email_verify.jsp</result>
+		</action>
+
+
+
+
+
+	</package>
+
+
+
+
+
+	<package name="Changepassword" extends="struts">
+		<!--Change password Start -->
+
+		<action name="ChangePass"
+			class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction"
+			method="ChangePass">
+			<!-- <result name="success" type="chain">profilepage</result> -->
+			<!-- <result name="error" type="chain">profilepage</result> -->
+		</action>
+
+		<!--Change password end -->
+		<action name="profilepage" method="getUserProfileDetails"
+			class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction">
+			<result type="tiles">/profilepage.tiles</result>
+		</action>
+		
+		 <action name="viewStudentProfile" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="viewStudentProfile">
+			<result name="success" type="tiles">/viewStudentProfile.tiles</result>
+			<result name="error" type="tiles">/viewStudentProfile.tiles</result>
+		</action>
+
+		<action name="imageupload"
+			class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction"
+			method="Uploadimage">
+			<interceptor-ref name="fileUpload">
+				<!-- <param name="size">307200</param> -->
+				<param name="maximumSize">307200</param>
+        		<param name="allowedTypes">
+            	image/png,image/jpeg
+        		</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack">
+
+			</interceptor-ref>
+			<!-- <result name="success" type="chain">profilepage</result> -->
+			<!-- <result name="error" type="chain">profilepage</result> -->
+		</action>
+
+		<action name="usersettings"
+			class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction"
+			method="Usersettings" />
+		<!-- <result name="success" type="chain">profilepage</result> -->
+		<!-- <result name="error" type="chain">profilepage</result> -->
+		<!-- </action> -->
+
+		<action name="userProfiledupdationsdata"
+			class="com.greenbuds.crunchprep.action.registration.ChangePasswordAction"
+			method="updateUserProfile">
+			<!-- <result name="success" type="chain">profilepage</result> <result 
+				name="error" type="chain">profilepage</result> -->
+		</action>
+
+
+	</package>
+
+
+
+</struts>

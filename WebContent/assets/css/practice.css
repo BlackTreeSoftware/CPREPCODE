@@ -1,0 +1,375 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*Start Select in paragraph script*/
+.select-in-paragraph{ 
+	background:#1aae88 ;
+	color:#FFF;
+	outline: 0;}
+
+/* End Start Select in paragraph script*/
+
+/* End practice customisation*/
+
+
+
+/*Created to kill opacity in small device disabled next button skip*/
+.xs-ap .btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=100);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: 1;
+}
+/*END Created to kill opacity in small device disabled next button skip*/
+
+.tree-view-practice ul li ul li .i{ padding-left:20px;}
+
+
+.practice-content img{margin-bottom:10px; margin-top:10px;}
+.practice-content hr.num-entry-double-hr {margin-top:10px;margin-bottom:10px;}
+
+.practice-content .img-responsive{margin-bottom:15px;}
+.text-blank-t-m{ margin-top:30px; margin-bottom:10px;}
+
+.practice-content .i-checks label{ margin-left:0px!important;}
+.practice-content .i-checks i{ padding-left:0px!important;}
+
+.m-ten{margin-top: 10px; margin-bottom: 10px;}
+.flag-icon{color:#e33244; font-size:170%;}
+.toggle-clock-icon{color:#1aae88; font-size:170%;}
+.toggle-clock-text{color:#999; font-size:170%;}
+
+
+
+.margin-question{min-height: 60px;}
+
+.skills-panel-padding{padding-top:5px; padding-bottom:5px;}
+
+.skills-set ul{margin-left:0px; padding-left:0px; margin-bottom: 0px;}
+
+.difficulty-level-margin{margin-bottom:13px;}
+
+.half-stars{min-width:180px; max-width:200px; width:100%!important;}
+
+#sparkline{margin-top:50px; margin-left: -34px;}
+
+/*scrollable box for RC*/
+
+.text-scroller{margin-top:20px; height:400px; overflow-y:scroll;}	
+
+/*End of scrollable box for RC*/
+
+
+/*XS OPTIONS TEXT*/
+
+.label-options ul {margin-top:0px; padding-left:0px;}
+.visible-for-label{ font-size:15px;  font-weight:400; color:#179877; display:inline-block; padding-right:6px;}
+
+.text-options{ font-size:15px; display:inline; font-weight:100; line-height:0}
+
+/*XS OPTIONS TEXT*/
+
+
+/*CSS FOR PROGRESS BAR*/
+.progresss {
+   margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+/*CSS FOR PROGRESS BAR*/
+
+/* css for instructions area*/
+
+.instrucitons-margin{margin-bottom:20px;}
+
+
+
+	
+/* End css for instructions area*/
+
+.skills-set .panel{ margin-bottom:-10px;}
+
+.less{margin-top: 15px;
+		  margin-bottom: 15px;
+		  border: 0;
+		  border-top: 1px solid #eee;}
+
+.skills-set ul li {list-style:none; padding-left:0px; margin-left:0px; }
+
+
+.main-nav-test { float:; margin-right:0px;}
+.main-nav-test ul li{ list-style:none; display:inline-block; padding-left:0px; padding-right:0px; }
+
+/*checkbox and radios in practice test */
+
+
+
+
+
+.options input[type=radio], .options input[type=checkbox] 
+	{
+		display:none;
+	}
+
+	.options input[type=radio] + label, .options input[type=checkbox] + label 
+	
+	{
+		display:inline-block;
+		margin:-1px;
+		padding: 4px 12px;
+		margin-bottom: 0%;
+		font-size: 14px;
+		line-height: 20px;
+		color: #999;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		background-color:none;
+		width:100%;
+		border: 1px solid #1aae88;
+		
+		
+	 }
+
+	.options input[type=radio]:checked + label
+	{
+		   background:#1aae88 ;
+		   color:#FFF;
+			outline: 0;
+		
+	}
+	
+	.options input[type=checkbox]:checked + label
+	{
+		   background:#1aae88 ;
+		   color:#FFF;
+		   border: rgba(255,255,255,0.3) 1px solid;
+		
+	}
+
+
+.btn-link-toggler-toggler {
+	line-height:-1;
+  font-weight: normal;
+  color: #428bca;
+  cursor: pointer;
+  border-radius: 0;
+  outline:none;
+}
+.btn-link-toggler,
+.btn-link-toggler:active,
+.btn-link-toggler[disabled],
+fieldset[disabled] .btn-link-toggler {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  outline:none;
+          box-shadow: none;
+}
+.btn-link-toggler,
+.btn-link-toggler:hover,
+.btn-link-toggler:focus,
+.btn-link-toggler:active {
+  border-color: none;
+  outline:none;
+}
+.btn-link-toggler:hover,
+.btn-link-toggler:focus {
+  color: #2a6496;
+  text-decoration: none;
+  outline:none;
+  background-color: transparent;
+}
+.btn-link-toggler[disabled]:hover,
+fieldset[disabled] .btn-link-toggler:hover,
+.btn-link-toggler[disabled]:focus,
+fieldset[disabled] .btn-link-toggler:focus {
+  color: #999;
+  text-decoration: none;
+  outline:none;
+}
+
+.btn-link-toggler {
+  color: #788288;
+}
+.btn-link-toggler.active {
+  webkit-box-shadow: none;
+  box-shadow: none;
+  outline:none;
+}
+
+.badgy{padding:6px; padding-left:15px; padding-right:15px; font-size:120%;}
+
+/*Media queries for all classes*/
+
+/* Small device answers class input type for xs-answer-options parent class */
+
+	.xs-answer-options input[type=radio], .xs-answer-options input[type=checkbox] 
+	{
+		display:none;
+	}
+
+	.xs-answer-options input[type=radio] + label, .xs-answer-options input[type=checkbox] + label 	
+	{
+		display:inline-block;
+		margin:-1.2px;
+		width:25%;
+		padding: 4px 12px;
+		margin-bottom: 0%;
+		font-size: 11px;
+		line-height: 20px;
+		color: #FFF;
+		text-align: center;
+		cursor: pointer;
+		background-color:#1ccacc ;	
+		outline: 1px solid #1ccacc ;
+		
+	 }
+
+	.xs-answer-options input[type=radio]:checked + label
+	{
+		background:#19b4b6 ;
+		color:#FFF;
+		outline:#17a6a8 1px solid;
+		
+	}
+	
+	.xs-answer-options input[type=checkbox]:checked + label
+	{
+		background:#19b4b6 ;
+		color:#FFF;
+		outline:#17a6a8 1px solid;
+		
+	}
+
+/* Main child class input type for options parent class */
+
+.answers-md li a{ padding:8px 28px;}
+
+@media (max-width:600px) {
+
+		.answers-md li a{ padding:8px 14px;}
+		.answers-md .m-r-10{margin-right:5px;}
+		}
+
+		 @media (min-width:1200px) {								
+									.m-left{margin-bottom:0px; margin-left: 20px;}
+									.badgy{padding:6px; padding-left:5px; padding-right:5px; font-size:120%;}
+									.main-text-for-practice-test h4{ font-size:120%}
+									
+									#half img{ width:15%;}
+									#half{ margin-left:-10px;}
+								
+							  }
+							  
+							  
+		 			@media (max-width:1200px) {
+															.test-customisation-title-margin{	 
+										  								 margin-top: 20px;
+																	     margin-bottom: 10px;
+																		 font-weight:200;
+																	    }
+											 }
+
+
+@media (max-width:930px) {	
+							.cals-hidden{ display:none}
+							.main-nav-test .total-cals-hide{ padding:5px 5px!important;}
+							
+							.main-nav-test ul li img{ width:21px!important; height:21px!important;}
+							}
+
+
+		 @media (max-width:1100px) {								
+								
+									.badgy{padding:6px; padding-left:5px; padding-right:5px; font-size:120%;}
+									.main-text-for-practice-test h4{ font-size:120%}
+									
+									#half img{ width:12%;}
+									#half{ margin-left:-10px;}
+								
+							  }
+	
+	 @media (max-width:900px) {								
+								.instrucitons-margin{margin-bottom:10px;}
+								
+								#half{ margin-left:-20px;}
+								#half img{ width:10%;}
+								.main-text-for-practice-test h4{ font-size:100%}
+								.badgy{padding:6px; padding-left:5px; padding-right:5px; font-size:100%;}
+								
+							  }							  						  
+	
+	
+	@media screen and (max-width:800px) {
+										 .instrucitons-margin{margin-bottom:10px;}
+										 .hidden-question{ display:none}
+										
+										  .text-scroller{margin-top:20px; height:auto; overflow:auto }	
+										  .text-scroller{margin-top:20px; height:auto; overflow:auto }	
+										  
+										  .md-less-hr{		   		margin-top: 10px;
+																	  margin-bottom: 15px;
+																	  border: 0;
+																	  border-top: 1px solid #eee;}
+																	  
+										  
+																	  
+										}
+										
+		@media screen and (max-width:507px) {								
+											.question-category{display:none}
+											.total-cals-hide{display:none}
+											}
+
+	@media (min-width:800px){
+								.instrucitons-margin{margin-bottom:5px;}	
+								
+														
+							}
+							
+		@media (max-width:766px){
+								
+								
+								
+							 
+							}							
+									
+	
+		@media (min-width:481px) {		
+									.visible-for-label{ display:none!important;}					
+									
+		 						  }
+								  
+								  
+								   @media (max-width:492px) {
+							  		.answers-md li a{ padding:7px 15px;}
+									
+					         }
+								  
+								  
+    @media (max-width:480px) {
+							  		.instrucitons-margin{margin-bottom:0px;}
+									.practice-content .radio, .practice-content .checkbox {padding-left: 0px;}
+									
+									.hide-for-label{display:none!important;}
+									.practice-content .i-checks input {
+																	display:none;
+																	}
+
+									
+					         }	
+							 
+    @media (max-width:320px) {
+							  	
+								.instrucitons-margin{margin-bottom:0px;}
+					         }
+/*End of media queries for all classes*/

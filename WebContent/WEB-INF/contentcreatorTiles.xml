@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    <tiles-definitions>
+	
+	
+	<definition name="adminLayout" template="/pages/layout/common-layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"  value="/pages/template/header.jsp" />
+		<put-attribute name="menu" value="/pages/template/adminmenu.jsp" />
+		<put-attribute name="body" value="/pages/template/body.jsp" />
+		<put-attribute name="footer" value="/pages/template/footer.jsp" />
+	</definition>
+	
+	<!-- AWA Questions Start  -->
+	
+	<definition name="/getManageAWAquestions.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/awa/manageAWAquestions.jsp" />
+	</definition>
+	<definition name="/getManageAWAquestionsajax.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/awa/manageAWAquestionsajax.jsp" />
+	</definition>
+	
+	
+	<definition name="/addSubLessons.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/lessons/addsublessons.jsp" />
+	</definition>
+	<!-- AWA Questions End  -->
+			
+	<!-- TextCompletion  -->
+	<definition name="/getQUestionsUploading.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/text-completion.jsp" />
+	</definition>
+	<definition name="verbalQuestionDisplayTiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/VerbalQuestionsDisplay.jsp" />
+	</definition>
+	<!-- TextCompletion  -->
+	
+
+	<definition name="/getDifficulties.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/difficulties/adddifficulty.jsp" />
+	</definition>
+	
+	<definition name="/getOrintationQuestions.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/orientation/orientation.jsp" />
+	</definition>
+	
+	<definition name="/addQuestionActions.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/referalMaster/addQuestionActions.jsp" />
+	</definition>
+
+	<!-- Numeric Entry + Data Interpretation -->
+	<definition name="/numericEntryTable.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/quant/numeric_entry_table.jsp" />
+	</definition>
+	
+	<!-- Numeric Entry  -->
+
+	
+
+	
+	<!-- Quantitative Comparision  -->
+	<definition name="/quantitativeComparision.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/quant/quantitative_comparision.jsp" />
+	</definition>
+	<!-- Quantitative Comparision  -->
+	
+	
+	
+
+	
+	
+		<!-- Skill levels tiles -->
+	
+		<definition name="/skill-levels.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/skillLevels/addskills.jsp" />
+	</definition>
+	
+		<definition name="/list-skill-levels.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/skillLevels/skill-levels-list.jsp" />
+		</definition>
+	<!-- End of Skill levels tiles -->
+	
+	
+	
+		<!-- Referral Condition Panel -->
+	
+		<definition name="/referral-condition-panel.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/referalMaster/referral-condition-panel.jsp"/>
+	</definition>
+	
+		<definition name="/list-referral-conditions.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/referalMaster/list-referral-conditions.jsp" />
+		</definition>
+	<!-- End of Referral levels tiles -->
+	
+	<!-- Refferal Masters Start  -->
+	<definition name="/addReferralMasters.tiles" extends="adminLayout">
+	<put-attribute name="body" value="/pages/contentcreator/referalMaster/refferalmasters.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="/readingComprehensionPage.tiles" extends="adminLayout">
+	    <put-attribute name="body" value="/pages/contentcreator/questions/verbal/readingcomprehension.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Refferal Masters Start  -->
+	
+	<!-- Mailmaster Template Start  -->
+	
+	<definition name="/getMailmasterTemplate.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/mailmaster/MailmasterTemplate.jsp" />
+	</definition>
+	
+	<!-- Mailmaster Template End  -->
+
+
+
+	<!-- DataInterpretation Start -->
+
+	<definition name="/dataInterpretation.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/datainterpretation/addDataInterpretion.jsp" />
+	</definition>
+	
+	<!-- DataInterpretation End-->
+	
+	
+	
+	<!-- ProblemSolving Start -->
+    
+    <definition name="/problemSolvingTable.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/quant/problem_solving_table.jsp" />
+	</definition>
+    
+	<definition name="/problemSolving.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/contentcreator/questions/quant/ProblemSolving.jsp" />
+	</definition>
+	
+	<!-- DataInterpretation End-->
+	
+	<definition name="/TermsConditions.tiles" extends="adminLayout">
+	 <put-attribute name="body" value="/pages/contentcreator/termsAndPolicies/TermsConditions.jsp" />
+	</definition>
+
+	
+	<definition name="/AdminRegistration.tiles" extends="adminLayout">
+	 <put-attribute name="body" value="/pages/contentcreator/termsAndPolicies/AdminRegistration.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	
+	<!-- Quant Comparision Tiles -->
+	
+	<definition name="/quant-comparision.tiles" extends="adminLayout">
+	 <put-attribute name="body" value="/pages/contentcreator/questions/quant/Quant-Comparision.jsp" />
+	</definition>
+
+	<definition name="/quant-comparision-questions.tiles" extends="adminLayout">
+	 <put-attribute name="body" value="/pages/contentcreator/questions/quant/quant-comparision-questions-display.jsp" />
+	</definition>
+	
+	<!-- End of Quant Comparision Tiles -->
+
+ <!-- LessonsMaster -->
+ <definition name="/lessonMaster.tiles" extends="adminLayout">	    
+		<put-attribute name="body" value="/pages/contentcreator/lessons/lessons_master.jsp" />
+	</definition>
+	<!-- Critical Reasoning -->
+	<definition name="/criticalReasoning.tiles" extends="adminLayout">	    
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/criticalReasoning.jsp" />
+	</definition>
+	<definition name="/criticalReasoningTable.tiles" extends="adminLayout">	    
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/criticalReasoningTable.jsp" />
+	</definition>
+	<!-- Critical Reasoning -->
+	
+	
+	
+	
+	<!-- Reading Comprehension Questions -->
+	
+	<definition name="/reading-comprehension-questions.tiles" extends="adminLayout">	    
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/reading-comprehension-questions.jsp" />
+	</definition>
+	<definition name="/reading-comprehension-questionsTable.tiles" extends="adminLayout">	    
+		<put-attribute name="body" value="/pages/contentcreator/questions/verbal/readingcomprehensionquestionstable.jsp" />
+	</definition>
+	
+	<!--End of  Reading Comprehension Tiles -->
+	
+	
+	
+</tiles-definitions> 

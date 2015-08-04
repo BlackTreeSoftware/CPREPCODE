@@ -1,0 +1,31 @@
+/*This is for anchor tag with green color*/
+a.green {
+	color: #179877;
+}
+
+a.green:hover,.green:active {
+	color: #47a447;
+	text-decoration: underline
+}
+
+a.link-lesson {
+	color: #006666;
+	line-height: 0
+}
+
+a.link-lesson:hover,link-lesson:active {
+	color: #060;
+	text-decoration: underline
+}
+
+.table .lheight {
+	line-height: 8;
+}
+
+.table .nlheight {
+	line-height: 0;
+}
+
+.table .nl {
+	line-height: -1;
+}

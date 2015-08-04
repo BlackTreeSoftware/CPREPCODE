@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+
+	<package name="mentor" extends="struts" namespace="/"> 
+ 	
+ 		
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="mentorAssignedStudentList" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="getMentorAssignedStudents">
+
+			<result name="success" type="tiles">/mentorAssignedStudentList.tiles</result>
+		</action>
+		
+		<action name="studentProgressbar" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="getStudentProgressBars">
+	
+			<result name="success" type="tiles">/studentProgressbar.tiles</result>
+		</action>
+
+	  <action name="mentorStudentLogs" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="getMentorStudentLogs">
+			<result name="success" type="tiles">/mentorStudentLogs.tiles</result>
+			<result name="error" type="tiles">/mentorStudentLogs.tiles</result>
+		</action>
+		
+ <action name="viewProgress" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="viewProgress">
+			<result name="success" type="tiles">/viewProgress.tiles</result>
+			<result name="error" type="tiles">/viewProgress.tiles</result>
+		</action>
+		
+		<action name="mentorStudentList" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="mentorStudentList">
+			<result name="success" type="tiles">/mentorStudentList.tiles</result>
+			<result name="error" type="tiles">/mentorStudentList.tiles</result>
+		</action>
+		
+		<action name="viewSectionProgress" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="viewSectionProgress">
+			<result name="success" type="tiles">/viewSectionProgress.tiles</result>
+			<result name="error" type="tiles">/viewSectionProgress.tiles</result>
+		</action>
+		
+		<action name="mentorSendingMail" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="mentorSendingMail"/>			
+		
+		<action name="mentorStudentLogsList" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="mentorStudentLogsList">
+			<result name="success" type="tiles">/mentorStudentLogsList.tiles</result>
+			<result name="error" type="tiles">/mentorStudentLogsList.tiles</result>
+		</action>
+		
+		<action name="Mentor-Student-Activity" class="com.greenbuds.crunchprep.action.mentor.MentorAction" method="getPracticeSummaryChartData">
+				<result name="success" type="tiles">/mentorStudentActivity.tiles</result>
+		</action>
+    </package>
+  
+  </struts>

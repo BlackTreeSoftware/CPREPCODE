@@ -1,0 +1,17 @@
+<style>
+  	/*This is for anchor tag with green color*/
+    table .btn{padding:0px !important;}
+    a.text-success:hover{color:#158b6c;}
+	
+	a.text-primary:link{color:#2796de;}
+	a.text-primary:hover{color:#0d5e92; text-decoration:underline;}
+	   
+	a.green{color:#179877;} 
+	a.green:hover,.green:active{color:#47a447; text-decoration:underline;} 
+	
+	a.link-lesson{color:#006666;}
+	a.link-lesson:hover,link-lesson:active{color:#060; text-decoration:underline;}
+	
+	a.bt-table:hover, bt-table:active{text-decoration:none}
+	
+  </style>

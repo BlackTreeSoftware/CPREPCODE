@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    <tiles-definitions>
+	<definition name="adminLayout" template="/pages/layout/common-layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"  value="/pages/template/header.jsp" />
+		<put-attribute name="menu" value="/pages/template/adminmenu.jsp" />
+		<put-attribute name="body" value="/pages/template/body.jsp" />
+		<put-attribute name="footer" value="/pages/template/footer.jsp" />
+	</definition>
+	
+	
+	
+	
+	<definition name="/getLogs.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/studentDailyLogs.jsp" />
+	</definition>
+	<definition name="/getips.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/iptracker.jsp" />
+	</definition>
+	<definition name="/assignmentorview.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/assignmentor.jsp" />
+	</definition>
+	
+	<definition name="/adminMentorStudents.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/adminMentorStudents.jsp" />
+	</definition>
+	
+	<definition name="/questionsperDay.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/noofQuestionsperDay.jsp" />
+	</definition>
+	
+	<definition name="/lessonsperDay.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/noofLessonsperDay.jsp" />
+	</definition>
+	
+	<definition name="/AdminDashboard.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/template/admindashboard.jsp" />
+	</definition>
+	
+	<definition name="/mentoraccounts.tiles" extends="adminLayout">
+		<put-attribute name="body" value="/pages/admin/mentoraccounts.jsp" />
+	</definition>
+	
+	</tiles-definitions>

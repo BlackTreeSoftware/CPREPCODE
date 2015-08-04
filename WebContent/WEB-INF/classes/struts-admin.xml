@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+
+	<package name="admin" extends="struts" namespace="/"> 
+ 	
+ 		
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="viewlogs" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="getViewLogs">
+
+			<result name="success" type="tiles">/getLogs.tiles</result>
+		</action>
+		
+		<action name="ipaddress" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="ipAddresses">
+
+			<result name="success" type="tiles">/getips.tiles</result>
+		</action>
+		
+		<action name="adminMentorStudents" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="adminMentorStudents">
+
+			<result name="success" type="tiles">/adminMentorStudents.tiles</result>
+		</action>
+
+		<action name="assignmentorview" class="com.greenbuds.crunchprep.action.admin.AssignMentorAction" method="getMentors">
+		<result name="success" type="tiles">/assignmentorview.tiles</result>
+		</action>
+		
+		<action name="getMentors" class="com.greenbuds.crunchprep.action.admin.AssignMentorAction" method="getMentors">
+		<result name="success">/pages/admin/assignmentorAjax.jsp</result>
+			<result name="error">/pages/admin/assignmentorAjax.jsp</result>
+		</action>
+
+<!--   Admin no of questions Start -->
+		<action name="questionsperDay" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="noofQuestionsPerDay" >
+
+
+			<result name="success" type="tiles">/questionsperDay.tiles</result>
+		</action>
+		<!--  Srikanth JSON Begin -->
+	<!-- 	<action name="QuestionsData" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="getQuestionCoustomiztionData"/> -->
+		<action name="usersGraphData" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="noofUsersGraph"/>
+		
+		<!--  Srikanth JSON ENd -->
+		
+ <!-- Admin no of questions End -->
+    <action name="lessonsperDay" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="noofLessonsPerDay">
+
+			<result name="success" type="tiles">/lessonsperDay.tiles</result>
+		</action>
+
+		
+		<action name="assignMentors" class="com.greenbuds.crunchprep.action.admin.AssignMentorAction" method="assignMentor">
+		 <result name="success">/pages/admin/assignmentorAjaxTable.jsp</result>
+			<result name="error">/pages/admin/assignmentorAjaxTable.jsp</result>
+		</action>
+		
+		<action name="updateMentors" class="com.greenbuds.crunchprep.action.admin.AssignMentorAction" method="updateMentors">
+		 <result name="success">/pages/admin/assignmentorAjaxTable.jsp</result>
+			<result name="error">/pages/admin/assignmentorAjaxTable.jsp</result>
+		</action>
+		
+		<action name="deleteMentors" class="com.greenbuds.crunchprep.action.admin.AssignMentorAction" method="deleteMentor">
+		 <result name="success">/pages/admin/assignmentorAjaxTable.jsp</result>
+			<result name="error">/pages/admin/assignmentorAjaxTable.jsp</result>
+		</action>
+
+	
+		<action name="mentoraccounts" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="getMentorAccounts">
+
+			<result name="success" type="tiles">/mentoraccounts.tiles</result>
+		</action>
+		
+		<action name="getMentorStudentAccounts" class="com.greenbuds.crunchprep.action.admin.AdminAction" method="getMentorStudentAccounts">
+		 <result name="success">/pages/admin/mentoraccountsAjax.jsp</result>
+			<result name="error">/pages/admin/mentoraccountsAjax.jsp</result>
+		</action>
+		
+    </package>
+  
+  </struts>

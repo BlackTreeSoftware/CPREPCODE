@@ -1,0 +1,32 @@
+
+
+.question_index {font-size:15px; font-weight:normal;padding-top:10px}
+.xs-answer-options{ position:fixed; bottom:0px;}
+.btnn{ padding-top:7px; padding-bottom:20px;}
+
+@media screen and (max-width:800px) {
+	
+	.question_index p {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+}
+
+@media ( max-width :392px) {
+	
+	.question_index p {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 12px;
+	}
+}
+
+@media (min-width:493px) {							
+									.xs-options{ display:none}	
+									.xs-answer{display:none}
+}
+
+
+

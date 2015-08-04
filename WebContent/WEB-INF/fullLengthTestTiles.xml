@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    <tiles-definitions>
+	
+	
+	<definition name="userLayout" template="/pages/layout/common-layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"  value="/pages/template/header.jsp" />
+		<put-attribute name="menu" value="/pages/template/menu.jsp" />
+		<put-attribute name="body" value="/pages/template/body.jsp" />
+		<put-attribute name="footer" value="/pages/template/footer.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Practice Session Start  -->
+	
+	<definition name="/FulllengthStartPage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/fulllength_start.jsp" />
+	</definition>
+	<definition name="/resumefulllength.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/resumeTest.jsp" />
+	</definition>
+	
+	
+	<definition name="/startFullTest.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/full.jsp" />
+	</definition>
+	
+	<definition name="/startResumeTest.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/full.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="/OneMinuteBreak.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/one_minuteBreakpage.jsp" />
+	</definition>
+	
+	<definition name="/help.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/help.jsp" />
+	</definition>
+	<definition name="/existPage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test//existPage.jsp" />
+	</definition>
+	
+<definition name="/getReviewPage" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/review-questions.jsp" />
+	</definition>
+	
+	
+	<!--  Fulllength test Result page Start -->
+	
+	  <definition name="/fulllengthTestHistory.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/fulllengthTestHistory.jsp"/>
+	</definition>
+	
+	
+	
+	
+	
+	<!-- Fulllength test Result page End -->
+
+	<definition name="/fullresultPage.tiles" extends="userLayout">
+		<put-attribute name="body" value= "/pages/user/full-length-test/result.jsp"/>
+	</definition>
+	
+	 <definition name="/get-full-session-retry-questions.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/full_session_question_retry.jsp"/>
+	</definition>
+ 
+
+<!-- Practice Test Ends -->
+
+<!-- Reports Start -->
+	<definition name="/getOverallPerformancePage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/reports/overallperformance.jsp" />
+	</definition>
+	
+	<definition name="/getQuestionAnalysisPage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/full-length-test/reports/questionanalysis.jsp" />
+	</definition>
+	
+	
+<!-- Reports End -->
+	
+	</tiles-definitions>

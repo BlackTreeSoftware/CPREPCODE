@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+    <tiles-definitions>
+	<definition name="userLayout" template="/pages/layout/common-layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"  value="/pages/template/header.jsp" />
+		<put-attribute name="menu" value="/pages/template/menu.jsp" />
+		<put-attribute name="body" value="/pages/template/body.jsp" />
+		<put-attribute name="footer" value="/pages/template/footer.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Practice Session Start  -->
+	
+	<definition name="/getCustomizationPage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/practice_session/practice_session_customization_setup_after_modifications.jsp" />
+	</definition>
+	
+	
+		<definition name="/get-practice-session-questions.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/practice_session/practice_session_question_display.jsp" />
+	</definition>
+	
+<definition name="/get-practice-session-retry-questions.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/practice_session/practice_session_question_retry.jsp" />
+	</definition>
+
+	<definition name="/resultPage.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/practice_session/result.jsp" />
+	</definition>
+	
+	
+
+	<!-- Practice Session End -->
+	
+	
+	<!-- Practice Test Start -->
+
+    <!-- Practice Session Summary Chart -->
+	
+	<definition name="/get-practice-session-summaryChart.tiles" extends="userLayout">
+		<put-attribute name="body" value="/pages/user/practice_session/practicesession_summary.jsp" />
+	</definition>
+ 
+
+<!-- Practice Test Ends -->
+
+
+
+
+	
+	</tiles-definitions>

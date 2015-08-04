@@ -1,0 +1,414 @@
+.toppbar {
+	padding-top: 5px;
+}
+
+.border-left {
+	border-left: #333 1px solid;
+}
+
+.clear {
+	clear: both;
+}
+
+@media screen and (max-width:480px) {
+	.panels-body ul {
+		padding-left: -40px;
+		margin-left: -20px;
+		font-size: 14px
+	}
+}
+
+@media screen and (max-width:320px) {
+	.panels-body ul {
+		padding-left: -40px;
+		margin-left: -20px;
+		font-size: 12px
+	}
+}
+
+
+.amPmCheckbox input[type="checkbox"] {
+	display: none;
+}
+
+.amPmCheckbox input[type="checkbox"]+label {
+	background: url(assets/images/icons/bookmarkicon-hover32.png) no-repeat;
+	height: 32px;
+	width: 32px;
+	padding: px;
+	cursor: pointer;
+}
+
+.amPmCheckbox input[type="checkbox"]:checked+label {
+	background: url(assets/images/icons/bookmarkicon32.png) no-repeat;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+}
+
+.book {
+	margin-top: -14px;
+}
+
+.book-xs {
+	margin-top: -2px;
+}
+
+a.buttonfornotes {
+	opacity: 1;
+}
+
+a.buttonfornotes:hover {
+	opacity: 1;
+}
+
+.tx-xs {
+	position: fixed;
+	top: 80px;
+	width: 100%;
+}
+
+.txtp {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+a.bug {
+	color: #444;
+	font-size: 22px;
+}
+
+a.bug:hover {
+	color: #999;
+}
+
+.head-bar-xs {
+	background-color: #f2f4f8;
+	margin-top: -15px;
+	position: fixed;
+	height: 60px;
+	z-index: 9999
+}
+
+.note-xs {
+	margin-top: 60px;
+}
+
+.lesson-content p {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.lesson-content h1 {
+	font-size: 28px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-family: sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.lesson-content h2 {
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-family: sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.lesson-content h3 {
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	font-family: sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.note_style {
+	z-index: 9999;
+	position: absolute;
+	right: 0px
+}
+
+.page_style {
+	padding-right: 800px;
+}
+
+.txt-main-notes {
+	width: 100%;
+}
+
+.col-sm-95 {
+	width: 77%
+}
+
+.col-sm-35 {
+	width: 22%
+}
+
+.col-sm-95-fuller {
+	width: 96%
+}
+
+.col-sm-35-fuller {
+	width: 3.5%
+}
+
+@media ( min-width :1200px) {
+	/*#sideTab {width: 78%;}
+								.sider {width:22%; */
+	/*.sideTabfull{ width:97%;}
+								.sideTabnill{ width:75%; margin-right:20px;}
+								
+								.siderfull {width:21%;margin-right:20px; }
+								.sidernill {width:1%;  }*/
+	.btn-chevron {
+		font-size: 180%;
+		padding-right: 8px;
+		margin-top: 15px;
+	}
+}
+
+@media ( max-width :1200px) {
+	.btn-chevron {
+		font-size: 150%;
+		margin-left: 0px;
+		margin-top: 15px;
+	}
+	.col-sm-35-fuller {
+		width: 4%
+	}
+	.btn-default {
+		font-size: 12px
+	}
+	.btn-test {
+		font-size: 12px;
+	}
+}
+
+@media ( max-width :1100px) {
+	.btn-chevron {
+		font-size: 150%;
+		margin-left: -5px;
+		margin-top: 15px;
+	}
+	.col-sm-35-fuller {
+		width: 4%
+	}
+	.btn-default {
+		font-size: 11px
+	}
+	.btn-test {
+		font-size: 11px;
+	}
+}
+
+@media ( max-width :900px) {
+	.btn-test {
+		font-size: 9px;
+	}
+}
+
+/*.sideTabfull{ width:97%;}
+	.sideTabnill{ width:75%; margin-right:20px;}
+	
+	.siderfull {width:21%;margin-right:20px; }
+	.sidernill {width:1%;  }*/
+@media screen and (max-width:800px) {
+	.headr-padding {
+		margin-top: 40px;
+	}
+	.lesson-content p {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 15px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.lesson-content h1,.lesson-content h2,.lesson-content h3 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.link-pading-xs-lft {
+		padding-left: 15px;
+	}
+	.link-pading-xs-rht {
+		padding-right: 15px;
+	}
+	.sider {
+		right: -6000px;
+	}
+	.col-sm-95 {
+		width: 100%;
+	}
+	.btn-chevron {
+		margin-left: 0px;
+	}
+	*
+	/
+	
+	
+	
+										
+
+
+}
+
+@media ( min-width :800px) {
+	.link-pading-xs-lft {
+		padding-left: 35px;
+	}
+	.link-pading-xs-rht {
+		padding-right: 35px;
+	}
+	.head-bar-xs {
+		display: none;
+	}
+}
+
+@media ( max-width :392px) {
+	/*.askdoubt-hide{display:none;}*/
+	.askdoubt-hide {
+		display: none
+	}
+	.btn-group {
+		margin-left: -45px;
+	}
+	.book-xs {
+		margin-top: -50px;
+		margin-right: -34px;
+	}
+	#note-icon {
+		margin-left: -40px;
+	}
+	.lesson-content p {
+		font-family: Verdana, Arial, sans-serif;
+		font-size: 12px;
+	}
+}
+
+@media ( max-width :320px) {
+	.btn-group {
+		margin-left: -15px;
+	}
+	.book-xs {
+		margin-top: -50px;
+		margin-right: -25px;
+	}
+	.btn-test {
+		font-size: 9px;
+	}
+}
+
+
+														 
+		.book{margin-top:-14px;}
+		.book-xs{margin-top:-2px; }	
+								 
+	a.buttonfornotes{ opacity:1; }
+														 	
+	a.buttonfornotes:hover{opacity:1; }		
+												 
+	.tx-xs{position:fixed; top:80px; width:100%;}
+	
+	.txtp{font-family:Verdana, Arial, sans-serif; font-size:14px;}
+	
+	a.bug{color:#444; font-size:22px;}
+	a.bug:hover{color:#999;}		
+	
+	.head-bar-xs{background-color:#f2f4f8; margin-top:-15px; position:fixed; height:60px; z-index:1000}
+	
+	.note-xs{margin-top:60px; }
+	
+	
+	
+	.lesson-content p{font-family:Verdana, Arial, sans-serif; font-size:15px; padding-left:20px; padding-right:20px;}
+	
+	.lesson-content h1{font-size:28px; margin-top:0px; margin-bottom:15px; font-family: sans-serif; padding-left:20px; padding-right:20px;}
+	.lesson-content h2{font-size:24px; margin-top:0px; margin-bottom:10px; font-family: sans-serif; padding-left:20px; padding-right:20px;}
+	.lesson-content h3{font-size:20px; margin-top:0px; margin-bottom:10px; font-family: sans-serif; padding-left:20px; padding-right:20px;}
+	
+	.note_style { z-index:9999;position:absolute; right:0px }
+	.page_style {padding-right:800px;}
+	
+	.txt-main-notes{ width:100%;}
+	
+	.col-sm-95{width:77%}
+	.col-sm-35{width:22%}
+	
+	.col-sm-95-fuller{width:96%}
+	.col-sm-35-fuller{width:3.5%}
+	
+	
+	@media (min-width:1200px) {
+								/*#sideTab {width: 78%;}
+								.sider {width:22%; */
+								/*.sideTabfull{ width:97%;}
+								.sideTabnill{ width:75%; margin-right:20px;}
+								
+								.siderfull {width:21%;margin-right:20px; }
+								.sidernill {width:1%;  }*/
+								.btn-chevron{ font-size:180%; padding-right:8px; margin-top:15px;}
+							  }
+     @media (max-width:1200px) {
+								.btn-chevron{ font-size:150%; margin-left:0px; margin-top:15px;}
+								.col-sm-35-fuller{width:4%}
+								.btn-default{font-size:12px}
+								.btn-test{font-size:12px;}
+							  }							  
+	
+	 @media (max-width:1100px) {
+								.btn-chevron{ font-size:150%; margin-left:-5px; margin-top:15px;}
+								.col-sm-35-fuller{width:4%}
+								.btn-default{font-size:11px}
+								.btn-test{font-size:11px;}
+							  }		
+							  
+		
+	 @media (max-width:900px) {								
+								.btn-test{font-size:9px;}
+							  }							  						  
+	
+	/*.sideTabfull{ width:97%;}
+	.sideTabnill{ width:75%; margin-right:20px;}
+	
+	.siderfull {width:21%;margin-right:20px; }
+	.sidernill {width:1%;  }*/
+
+	@media screen and (max-width:800px) {
+										  .headr-padding{ margin-top:40px;}
+										  .lesson-content p{font-family:Verdana, Arial, sans-serif; font-size:15px; padding-left:5px; padding-right:5px;}
+										  .lesson-content h1 , .lesson-content h2 , .lesson-content h3{ padding-left:0px; padding-right:0px;}
+										  .link-pading-xs-lft{ padding-left:15px;} .link-pading-xs-rht{ padding-right:15px;}
+										  .sider{display:none}
+										  .col-sm-95{width:100%;}
+										  .btn-chevron{ margin-left:0px; }*/
+										}
+	
+	@media (min-width:800px){
+							 .link-pading-xs-lft{ padding-left:35px;} 
+							 .link-pading-xs-rht{ padding-right:35px;} 
+							 .head-bar-xs{display:none;}
+							 
+							}
+										
+    @media (max-width:392px) {
+							  	/*.askdoubt-hide{display:none;}*/
+								.askdoubt-hide{display:none}
+								.btn-group{margin-left:-45px;}	
+								.book-xs{ margin-top:-50px; margin-right:-34px;}	
+								#note-icon{ margin-left:-40px;}		
+								
+								.lesson-content p{font-family:Verdana, Arial, sans-serif; font-size:12px; }		
+					         }	
+							 
+    @media (max-width:320px) {
+							  	.btn-group{margin-left:-15px;}	
+								.book-xs{ margin-top:-50px; margin-right:-25px;}
+								.btn-test{ font-size:9px;}
+								
+					         }											 
+							 					

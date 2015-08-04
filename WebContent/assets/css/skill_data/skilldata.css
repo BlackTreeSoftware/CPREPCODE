@@ -1,0 +1,34 @@
+#expandable-table tr td { vertical-align: middle}
+
+
+#expandable-table .progress {
+ 
+  margin-bottom: 3px;
+ 
+}
+
+.gre{ background-color:#146ca4; color:#FFF;}
+
+.greverb{ background-color:#1ccacc; color:#FFF;}
+
+
+.lesson-content p{font-family:Verdana, Arial, sans-serif; font-size:15px; padding-left:40px; padding-right:40px;}
+
+.questionsanswered{max-width:30px;}
+
+.accuracy{ max-width:80px}
+
+@media screen and (max-width:1024px) {										 									 
+									  .font-15{font-size:14px;}
+									  #expandable-table tr td { font-size:13px !important;}											 									 						
+									 }
+
+@media screen and (max-width:800px) {										 
+									 .lesson-content p{font-family:Verdana, Arial, sans-serif; font-size:15px; padding-left:5px; padding-right:5px;}
+									 .font-15{font-size:13px;}									
+									}
+									
+@media screen and (max-width:480px) {										 
+									 #expandable-table tr td { font-size:11px !important;}		
+									 #expandable-table tr th { font-weight:200 !important;}							
+									}				

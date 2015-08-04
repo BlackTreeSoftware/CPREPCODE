@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd   
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+        http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+       
+        <context:annotation-config /> 
+          
+<bean id="questionUploadController" class="com.greenbuds.crunchprep.controller.contentcreator.QuestionUploadController"/>
+<bean id="questionUploadDAO" class="com.greenbuds.crunchprep.dao.contentcreator.QuestionUploadDAO"/>
+
+         <bean id="forgotPasswordController" class="com.greenbuds.crunchprep.controller.registration.ForgotPasswordController"/>
+         <bean id="forgotPasswordDAO" class="com.greenbuds.crunchprep.dao.registration.ForgotPasswordDAO"/> 
+         <bean id="registrationController" class="com.greenbuds.crunchprep.controller.registration.RegistrationController"/>         
+         <bean id="registrationDAO" class="com.greenbuds.crunchprep.dao.registration.RegistrationDAO"/>
+         <bean id="subscriptionDAO" class="com.greenbuds.crunchprep.dao.contentcreator.SubscriptionDAO"></bean>
+         <bean id="subscriptionController" class="com.greenbuds.crunchprep.controller.contentcreator.SubscriptionController"></bean>
+         <bean id="loginController" class="com.greenbuds.crunchprep.controller.registration.LoginController"></bean>
+
+         <bean id="difficultyDAO" class="com.greenbuds.crunchprep.dao.contentcreator.DifficultyDAO"/>
+         <bean id="difficultyController" class="com.greenbuds.crunchprep.controller.contentcreator.DifficultyController"/>
+
+         <bean id="commonsController" class="com.greenbuds.crunchprep.controller.common.CommonsController"></bean>
+         
+         <bean id="orientationQuestionController" class="com.greenbuds.crunchprep.controller.contentcreator.OrientationQuestionController"/>
+         <bean id="orientationQuestionDAO" class="com.greenbuds.crunchprep.dao.contentcreator.OrientationQuestionDAO"/>
+         <bean id="lessonsController" class="com.greenbuds.crunchprep.controller.lessons.LessonsController"/>
+         <bean id="lessonsDAO" class="com.greenbuds.crunchprep.dao.lessons.LessonsDAO"/>
+         <bean id="lessonsActionsController" class="com.greenbuds.crunchprep.controller.lessons.LessonsActionsController"/>
+         <bean id="lessonsActionsDAO" class="com.greenbuds.crunchprep.dao.lessons.LessonsActionsDAO"/>
+       
+         <bean id="adminController" class="com.greenbuds.crunchprep.controller.admin.AdminController"/>
+         <bean id="adminDAO" class="com.greenbuds.crunchprep.dao.admin.AdminDAO"/>
+         
+         <bean id="mentorController" class="com.greenbuds.crunchprep.controller.mentor.MentorController"/>
+         <bean id="mentorDAO" class="com.greenbuds.crunchprep.dao.mentor.MentorDAO"/>
+      
+         <bean id="assignMentorDAO" class="com.greenbuds.crunchprep.dao.admin.AssignMentorDAO"/>         
+		 <bean id="assignMentorController" class="com.greenbuds.crunchprep.controller.admin.AssignMentorController"/>
+
+		<bean id="practiceSessionController" class="com.greenbuds.crunchprep.controller.practicesession.PracticeSessionController"></bean>	
+       
+       <bean id="addReferralQuestionDAO" class="com.greenbuds.crunchprep.dao.contentcreator.AddReferralQuestionDAO"></bean>
+       <bean id="addReferralQuestionController" class="com.greenbuds.crunchprep.controller.contentcreator.AddReferralQuestionController"></bean>       
+       
+      </beans>

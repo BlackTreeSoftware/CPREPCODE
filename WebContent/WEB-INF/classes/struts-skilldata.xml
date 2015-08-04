@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+
+	<package name="skillData" extends="struts" namespace="/"> 
+ 	
+ 		
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="skillData" class="com.greenbuds.crunchprep.action.skilldata.SkillDataAction" method="skillData"> 
+			<result name="success" type="tiles">/skillData.tiles</result>
+		</action>
+		
+		
+		
+    </package>
+  
+  </struts>

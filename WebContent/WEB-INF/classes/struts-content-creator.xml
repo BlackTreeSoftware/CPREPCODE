@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+
+	<package name="content-creator" extends="struts" namespace="/"> 
+ 	
+ 		
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+
+		</result-types>
+
+		<!-- AWA Start -->
+
+		<action name="Manage-AWA-Questions">
+			<result name="success" type="tiles">/getManageAWAquestions.tiles
+			</result>
+		</action>
+		<action name="AwaQuestionAdding"
+			class="com.greenbuds.crunchprep.action.questions.AwaAction" method="addAwaDetails" />
+
+
+		<action name="AwaQuestionslist" class="com.greenbuds.crunchprep.action.questions.AwaAction" method="awadetails">
+			<result name="success" type="tiles">/getManageAWAquestionsajax.tiles</result>
+		</action>
+
+		<action name="awalistdata"
+			class="com.greenbuds.crunchprep.action.questions.AwaAction" method="awadetails">
+			<result>/getManageAWAquestionsajax.tiles</result>
+		</action>
+   
+	
+		<action name="updateawa" class="com.greenbuds.crunchprep.action.questions.AwaAction" method="getupdatepagedetails">
+           <result name="success" type="tiles">/getManageAWAquestions.tiles
+			</result>
+		</action>
+		
+		<action name="deleteawa" class="com.greenbuds.crunchprep.action.questions.AwaAction" method="deleteawadetails">
+		 <result name="success" type="chain">AwaQuestionslist
+			</result>
+		
+		</action>
+		
+		<!-- AWA End -->
+
+
+
+		<!-- Text Completion -->
+		<!--  Sairam Begin -->
+<action name="jsonQuestionUploading" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="jsonQuestionUploading"/>
+<action name="deleteSelectedQuestions" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="deleteSelectedQuestions"/>
+
+		<action name="SentenceEquivalence" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="questionUploadRequiredData">
+          <result name="success" type="tiles">/getQUestionsUploading.tiles</result>
+          		</action>
+		<action name="TextCompletion" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="questionUploadRequiredData">
+		<result name="success" type="tiles">/getQUestionsUploading.tiles</result>
+		</action>
+		<action name="SentanceEqualanceQuestions" method="verbalQuestionsDisplaying" class="com.greenbuds.crunchprep.action.questions.QuestionAction">
+		<result name="success" type="tiles">verbalQuestionDisplayTiles</result>
+		</action>
+		<action name="TextCompletionQuestions" method="verbalQuestionsDisplaying" class="com.greenbuds.crunchprep.action.questions.QuestionAction">
+		<result name="success" type="tiles">verbalQuestionDisplayTiles</result>
+		</action>
+		<!--  Sairam End -->
+
+		<action name="adddifficulties" class="com.greenbuds.crunchprep.action.contentcreator.DifficultyLevelAction" method="getDifficulties">
+			<result name="success" type="tiles">/getDifficulties.tiles</result>
+		</action>
+		<action name="saveDifficulty" class="com.greenbuds.crunchprep.action.contentcreator.DifficultyLevelAction" method="saveDifficultie">
+			<result name="success">/pages/contentcreator/difficulties/difficultyAjax.jsp</result>
+			<result name="error">/pages/contentcreator/difficulties/difficultyAjax.jsp</result>
+		</action>
+		
+		<action name="deleteDifficulty" class="com.greenbuds.crunchprep.action.contentcreator.DifficultyLevelAction" method="deleteDifficultie">
+			<result name="success">/pages/contentcreator/difficulties/difficultyAjax.jsp</result>
+			<result name="error">/pages/contentcreator/difficulties/difficultyAjax.jsp</result>
+		</action>
+		
+		
+		<action name="orintationQuestions" class="com.greenbuds.crunchprep.action.contentcreator.OrientationQuestionAction" method="getOrientationQuestions">
+			<result name="success" type="tiles">/getOrintationQuestions.tiles</result>
+		</action>
+		
+		<action name="saveOrintationQuestions" class="com.greenbuds.crunchprep.action.contentcreator.OrientationQuestionAction" method="saveOrientationQuestions">
+			<result name="success">/pages/contentcreator/orientation/orientationAjax.jsp</result>
+			<result name="error">/pages/contentcreator/orientation/orientationAjax.jsp</result>
+		</action>
+		<action name="deleteorintationQuestions" class="com.greenbuds.crunchprep.action.contentcreator.OrientationQuestionAction" method="deleteOrientationQuestions">
+			<result name="success">/pages/contentcreator/orientation/orientationAjax.jsp</result>
+			<result name="error">/pages/contentcreator/orientation/orientationAjax.jsp</result>
+		</action>
+
+		
+		<action name="addQuestionActions" class="com.greenbuds.crunchprep.action.contentcreator.AddReferralQuestionAction" method="getConditions">
+			<result name="success" type="tiles">/addQuestionActions.tiles</result>
+		</action>
+		<action name="saveQuestionActions" class="com.greenbuds.crunchprep.action.contentcreator.AddReferralQuestionAction" method="saveQuestionActions">
+			<result name="success">/pages/contentcreator/referalMaster/addQuestionActionAjax.jsp</result>
+			<result name="error">/pages/contentcreator/referalMaster/addQuestionActionAjax.jsp</result>
+		</action>
+		<action name="deleteQuestionActions" class="com.greenbuds.crunchprep.action.contentcreator.AddReferralQuestionAction" method="deleteQuestionActions">
+			<result name="success">/pages/contentcreator/referalMaster/addQuestionActionAjax.jsp</result>
+			<result name="error">/pages/contentcreator/referalMaster/addQuestionActionAjax.jsp</result>
+		</action>
+
+		<action name="QuestionsUploading"
+			class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="questionUploadRequiredData">
+			<result name="success" type="tiles">
+			<param name="location">/getQUestionsUploading.tiles</param>
+			</result>
+		</action>
+
+
+		<action name="getProfile">
+		<result name="success">/pages/registration/profile.jsp</result>
+        </action>
+
+		<!-- Text Completion -->
+
+		<action name="getReadingComprehensionPage"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionAction">
+			<result name="success">/pages/contentcreator/questions/verbal/readingcomprehension.jsp
+			</result>
+		</action>
+
+
+
+		 
+
+		<!-- Start Lessons Masters @Sahitya -->
+
+		<action name="obtain_lesson" class="com.greenbuds.crunchprep.action.contentcreator.LessonsMaster" method="getSections">
+		<result name="success" type="tiles">/lessonMaster.tiles</result>
+		</action>
+		<action name="new_lesson_master"  class="com.greenbuds.crunchprep.action.contentcreator.LessonsMaster" method="saveNewLesson">
+		 	<result name="success">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result> 
+		 	<result name="edit-success">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result>	
+		 	<result name="error">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result>
+		 	<result name="exist">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result> 	  
+		 	
+		</action>
+		 
+		<action name="delete_lesson"  class="com.greenbuds.crunchprep.action.contentcreator.LessonsMaster" method="deleteLesson">
+		<result name="success">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result>
+		<result name="error">/pages/contentcreator/lessons/lessons_master_ajax.jsp</result> 
+	  		 
+		</action>
+        <!-- End Lessons Masters @Sahitya -->
+        <!-- Start Critical Reasoning @Sahitya -->
+        <action name="obtain_CriticalReasoning" class="com.greenbuds.crunchprep.action.contentcreator.CriticalReasoning" method="getPredata">
+		<result name="success" type="tiles">/criticalReasoning.tiles</result>
+		</action>
+        <action name="newCriticalReasoning" class="com.greenbuds.crunchprep.action.contentcreator.CriticalReasoning" method="savenewCriticalReasoning">	 
+		</action>
+        <action name="totalQuestionsList" class="com.greenbuds.crunchprep.action.contentcreator.CriticalReasoning" method="getAllquestions">
+		<result name="success" type="tiles">/criticalReasoningTable.tiles</result>
+		</action>
+		<action name="deleteQuestions" class="com.greenbuds.crunchprep.action.contentcreator.CriticalReasoning" method="deleteQuestions">
+		<result name="success">/pages/contentcreator/questions/verbal/CriticalReasoningTableAjax.jsp</result>
+		</action>		
+		 <action name="obtain_EditCriticalReasoning" class="com.greenbuds.crunchprep.action.contentcreator.CriticalReasoning" method="editCriticalReasoning">
+		<result name="success" type="chain">obtain_CriticalReasoning </result>
+		</action> 
+         <!-- End Critical Reasoning @Sahitya -->
+         
+		<action name="saveReadingComprehensionPage" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionAction" method="saveRC" >
+			<result name="success">/pages/contentcreator/questions/verbal/readingcomprehension.jsp</result>
+		</action>
+		
+
+
+
+
+
+		<!--@satya -->
+		<!-- Refferal Masters Start -->
+
+		<action name="addReferralMasters"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReferralMasterAction">
+			<result name="success" type="tiles">/addReferralMasters.tiles</result>
+		</action>
+
+
+		<action name="deleteReferralMaster"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReferralMasterAction"
+			method="deleteReferralMaster">
+			<result name="success">/pages/contentcreator/referalMaster/refferalmasters_ajax.jsp
+			</result>
+			<result name="error">/pages/contentcreator/referalMaster/refferalmasters_ajax.jsp
+			</result>
+
+		</action>
+
+		<action name="saveReferralMaster"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReferralMasterAction"
+			method="saveReferralMaster">
+			<result name="success">/pages/contentcreator/referalMaster/refferalmasters_ajax.jsp
+			</result>
+			<result name="error">/pages/contentcreator/referalMaster/refferalmasters_ajax.jsp
+			</result>
+
+		</action>
+
+
+		<!-- RC -->
+		<action name="readingComprehensionPage"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionAction">
+			<result name="success" type="tiles">/readingComprehensionPage.tiles
+			</result>
+		</action>
+
+		<action name="deleteReadingComprehension"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionAction"
+			method="deleteReadingComprehension">
+			<result name="success">/pages/contentcreator/questions/verbal/readingcomprehension_ajax.jsp
+			</result>
+<result name="error">/pages/contentcreator/questions/verbal/readingcomprehension_ajax.jsp
+			</result>
+			
+		</action>
+
+		<action name="saveReadingComprehension"
+			class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionAction"
+			method="saveReadingComprehension">
+			<result name="success">/pages/contentcreator/questions/verbal/readingcomprehension_ajax.jsp
+			</result>
+			<result name="error">/pages/contentcreator/questions/verbal/readingcomprehension_ajax.jsp
+			</result>
+
+		</action>
+		<!-- RC -->
+		
+		
+		
+		
+		
+		<action name="saveTermsConditions" class="com.greenbuds.crunchprep.action.contentcreator.PolicyAction" method="policySave">
+			<result name="success" type="tiles">/TermsConditions.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="updateTermsConditions" class="com.greenbuds.crunchprep.action.contentcreator.PolicyAction" method="policyUpdate">
+			<result name="success" type="tiles">/TermsConditions.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="deleteTermsConditions" class="com.greenbuds.crunchprep.action.contentcreator.PolicyAction" method="policyDelete">
+			<result name="success" type="tiles">/TermsConditions.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="TermsConditions" class="com.greenbuds.crunchprep.action.contentcreator.PolicyAction" method="getTermsPolicies">
+			<result name="success" type="tiles">/TermsConditions.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="RefreshTermsConditions" class="com.greenbuds.crunchprep.action.contentcreator.PolicyAction" method="getTermsPolicies">
+			<result name="success">/pages/contentcreator/termsAndPolicies/TermsConditionsTable.jsp</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		
+		<action name="saveAdminRegistration" class="com.greenbuds.crunchprep.action.contentcreator.AdminRegistrationAction" method="adminRegistrationSave">
+			<result name="success" type="tiles">/AdminRegistration.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="updateAdminRegistration" class="com.greenbuds.crunchprep.action.contentcreator.AdminRegistrationAction" method="adminRegistrationUpdate">
+			<result name="success" type="tiles">/AdminRegistration.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="deleteAdminRegistration" class="com.greenbuds.crunchprep.action.contentcreator.AdminRegistrationAction" method="adminRegistrationDelete">
+			<result name="success" type="tiles">/AdminRegistration.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="AdminRegistration" class="com.greenbuds.crunchprep.action.contentcreator.AdminRegistrationAction" method="getAdminDetails">
+			<result name="success" type="tiles">/AdminRegistration.tiles</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		<action name="RefreshAdminRegistration" class="com.greenbuds.crunchprep.action.contentcreator.AdminRegistrationAction" method="getAdminDetails">
+			<result name="success">/pages/contentcreator/termsAndPolicies/AdminRegistrationTable.jsp</result>
+			<result name="error" type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+
+		
+	 
+		
+		
+			<!-- @karuna -->
+		<!-- Skills Actions -->
+		
+		
+		<action name="manage-skill-levels" class="com.greenbuds.crunchprep.action.contentcreator.SkillsAction" method="getSkillLevels">
+		<result type="tiles">/skill-levels.tiles</result>
+		</action>
+		<action name="list-skill-levels" class="com.greenbuds.crunchprep.action.contentcreator.SkillsAction" method="getSkillLevels">
+		<result>/pages/contentcreator/skillLevels/skill-levels-list.jsp</result>
+		</action>
+		<action name="skill-levels" class="com.greenbuds.crunchprep.action.contentcreator.SkillsAction" method="skillsActions">
+		<result type="chain">manage-skill-levels</result>
+		</action>
+			
+		
+		<!-- End of Skills Action -->
+		
+		
+			<!-- @karuna -->
+		<!-- Referral Condition Actions -->
+		
+		
+		<action name="referral-condition-panel">
+		<result type="tiles">/referral-condition-panel.tiles</result>
+		</action>
+		<action name="list-referral-conditions" class="com.greenbuds.crunchprep.action.contentcreator.ReferralConditionAction">
+		<result>/pages/contentcreator/referalMaster/list-referral-conditions.jsp</result>
+		</action>
+		<action name="manage-referral-conditions" class="com.greenbuds.crunchprep.action.contentcreator.ReferralConditionAction" method="actionsOnReferralConditions">		
+		</action>
+			
+		
+		<!-- End of Referral Conditions Action -->
+		
+
+		<!-- Numeric Entry + Data Interpretation -->
+		<action name="NumericEntry" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction">
+		<result name="success">/pages/contentcreator/questions/quant/numeric_entry.jsp</result>
+		</action>
+		
+		<action name="NumericEntryTable" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction" method="viewData">
+		<result name="success" type="tiles">/numericEntryTable.tiles</result>
+		</action>
+		
+		
+		
+		<action name="AddNumericEntry" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction" method="insertData">
+		<result name="success">/pages/contentcreator/questions/quant/numeric_entry_table_ajax.jsp</result>
+		<result name="error">/pages/contentcreator/questions/quant/numeric_entry_table_ajax.jsp</result>
+		</action>
+		
+		<action name="DeleteNumericEntry" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction" method="deleteData">
+		<result name="success">/pages/contentcreator/questions/quant/numeric_entry_table_ajax.jsp</result>
+		<result name="error">/pages/contentcreator/questions/quant/numeric_entry_table_ajax.jsp</result>
+		</action>
+		
+		<action name="UpdateNumericEntry" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction" method="updateData">
+		<result name="success">/pages/contentcreator/questions/quant/numeric_entry.jsp</result>
+		<result name="error">/pages/contentcreator/questions/quant/numeric_entry.jsp</result>
+		</action>
+		
+		<action name="ViewNumericEntry" class="com.greenbuds.crunchprep.action.contentcreator.NumericEntryAction" method="viewData">
+		<result name="success">/pages/contentcreator/questions/quant/numeric_entry_table_ajax.jsp</result>
+		</action>
+		
+		
+		<!-- Numeric Entry + Data Interpretation -->
+		
+		<!-- Problem Solving + Data Interpretation -->
+		<action name="ProblemSolving">
+		<result name="success" type="tiles">/problemSolving.tiles</result>
+		</action>
+		
+		
+		<!-- Problem Solving + Data Interpretation -->
+		
+		<!-- Quantitative Comparision  -->
+		<action name="QuantitativeComparision">
+		<result name="success" type="tiles">/quantitativeComparision.tiles</result>
+		</action>
+		
+		<!-- Quantitative Comparision  -->
+		
+		
+		
+		
+
+		<!-- MailmasterTemplate Start-->
+		
+		
+		<action name="Mailmaster" class="com.greenbuds.crunchprep.action.contentcreator.MailmasterTemplateAction" method="getTemplateList">
+			<result name="success" type="tiles">/getMailmasterTemplate.tiles</result>
+			<result name="error" type="tiles">/getMailmasterTemplate.tiles</result>
+			<result name="input" type="tiles">/getMailmasterTemplate.tiles</result>
+		    
+		</action>
+		
+		
+		<action name="Mailmaster-Template" class="com.greenbuds.crunchprep.action.contentcreator.MailmasterTemplateAction" method="addMailmasterTemplate">
+		   <result name="success">/pages/contentcreator/mailmaster/MailmasterTemplateAjax.jsp</result>
+		    <result name="error">/pages/contentcreator/mailmaster/MailmasterTemplateAjax.jsp</result>
+		   
+		   	
+		</action>
+	
+		<action name="Mailmaster-Delete" class="com.greenbuds.crunchprep.action.contentcreator.MailmasterTemplateAction" method="deleteMailmasterTemplate">
+		  <result name="success">/pages/contentcreator/mailmaster/MailmasterTemplateAjax.jsp</result>
+		    <result name="error">/pages/contentcreator/mailmaster/MailmasterTemplateAjax.jsp</result>
+		   	
+		</action>
+		
+		<!-- MailmasterTemplate End-->
+		
+		<!-- Data Interpretion Start -->
+		<action name="Data-Interpretation" class="com.greenbuds.crunchprep.action.contentcreator.DataInterpretionAction" method="getInterpretionList">
+			<result name="success" type="tiles">/dataInterpretation.tiles</result>
+			<result name="error" type="tiles">/dataInterpretation.tiles</result>
+			<result name="input" type="tiles">/dataInterpretation.tiles</result> 
+		</action>
+		
+		<action name="DatInterpretation-Add" class="com.greenbuds.crunchprep.action.contentcreator.DataInterpretionAction" method="addDataInterpretion">
+			<result name="success">/pages/contentcreator/datainterpretation/addDataInterpretionAjax.jsp</result>
+			<result name="error">/pages/contentcreator/datainterpretation/addDataInterpretionAjax.jsp</result>
+		    
+		</action>
+		
+			
+		<action name="DataInterpretion-Delete" class="com.greenbuds.crunchprep.action.contentcreator.DataInterpretionAction" method="deleteDataInterpretation">
+			<result name="success">/pages/contentcreator/datainterpretation/addDataInterpretionAjax.jsp</result>
+			<result name="error">/pages/contentcreator/datainterpretation/addDataInterpretionAjax.jsp</result>
+		    
+		</action>
+		
+		
+<!-- Data Interpretion END -->
+		
+		<!-- Prroblem Solving start  -->
+		 
+		<action name="Manage-ProblemSolving-Questions" >
+			<result type="tiles">/problemSolving.tiles</result> 
+		</action> 
+		<!-- Prroblem Solving end  -->
+
+<!--Add Sublessons Start  -->
+		
+		<action name="addSubLessons" class="com.greenbuds.crunchprep.action.contentcreator.SubLessonsAction">
+			<result name="success" type="tiles">/addSubLessons.tiles</result>
+		</action>
+		
+		<action name="sectionBasedLessons" class="com.greenbuds.crunchprep.action.contentcreator.SubLessonsAction" method="getSectionBasedLessons"> 
+		</action>
+		
+		<action name="LessonHeirarchy" class="com.greenbuds.crunchprep.action.contentcreator.SubLessonsAction" method="LessonHeirarchy"> 
+		</action>
+		
+		<action name="saveSublessons" class="com.greenbuds.crunchprep.action.contentcreator.SubLessonsAction" method="saveSublessons">
+			<result name="success">/pages/contentcreator/lessons/sublessons-table.jsp</result>
+			<result name="error">/pages/contentcreator/lessons/sublessons-table.jsp</result>
+		</action>
+ 
+        <action name="deleteSubLessons" class="com.greenbuds.crunchprep.action.contentcreator.SubLessonsAction" method="deleteSublessons">
+			<result name="success">/pages/contentcreator/lessons/sublessons-table.jsp</result>
+		</action>
+    <!--Add Sublessons End  -->
+
+
+
+
+	<!-- Quant Comparision Actions -->
+		
+	<action name="quant-comparision" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="questionUploadRequiredData">
+		<result type="tiles">/quant-comparision.tiles</result>
+		</action>
+		
+		
+	<action name="QuantComparisionUploading" class="com.greenbuds.crunchprep.action.questions.QuestionAction"
+			method="QuantComparisionUploading"/>	
+			
+	<action name="quant-comparision-questions" method="verbalQuestionsDisplaying" class="com.greenbuds.crunchprep.action.questions.QuestionAction">
+		<result name="success" type="tiles">/quant-comparision-questions.tiles</result>
+		</action>		
+ <!-- End of Quant Comparisions -->
+ 
+ 
+ <!-- Start REading Comprehension Question Actions @Sahitya  --> 
+       <action name="reading-comprehension-questions" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="prepareInitialData">
+		<result name="success" type="tiles">/reading-comprehension-questions.tiles</result>
+		</action>
+		<action name="newReadingComprehensionQuestion" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="saveNewReadingComprehensionQuestion">
+		
+		</action>
+        <action name="reading-comprehension-questionsTable" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="getAlltheRCQuestions">
+		<result name="success" type="tiles">/reading-comprehension-questionsTable.tiles</result>
+		</action>
+		
+	    <action name="deleteRcQuestions" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="deleteSelectedRcQuestions">
+		<result name="success">/pages/contentcreator/questions/verbal/readingcomprehensionquestionsAjax.jsp</result>
+		<result name="error">/pages/contentcreator/questions/verbal/readingcomprehensionquestionsAjax.jsp</result>
+		</action>
+			
+		 <action name="getPassageData" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="getPassagesBasedonType"> 
+		 
+		</action>
+		<action name="obtain_EditRCquestion" class="com.greenbuds.crunchprep.action.contentcreator.ReadingComprehensionQuestion" method="obtainEditRCquestion">
+		<result name="success" type="chain">reading-comprehension-questions</result>
+		<result name="error" type="tiles">/reading-comprehension-questionsTable.tiles</result>
+		</action>
+       <!-- End of REading Comprehension Question Actions-->
+ 
+ 
+ 
+ 
+ 
+ <!-- Prroblem Solving start  -->
+		<action name="problemSolvingTable" class="com.greenbuds.crunchprep.action.contentcreator.ProblemSolvingAction" method="problemSolvingTable">
+			<result name="success" type="tiles">/problemSolvingTable.tiles</result> 
+		</action> 
+		
+		<action name="Manage-ProblemSolving-Questions" class="com.greenbuds.crunchprep.action.contentcreator.ProblemSolvingAction">
+			<result name="success">/pages/contentcreator/questions/quant/ProblemSolving.jsp</result> 
+		</action>  
+		
+		<action name="saveProblemSolvingQuestion" class="com.greenbuds.crunchprep.action.contentcreator.ProblemSolvingAction" method="saveProblemSolvingQuestion">
+			 <result name="success">/pages/contentcreator/questions/quant/problem_solving_table_ajax.jsp</result>  
+			 <result name="error" type="chain">problemSolvingTable</result>   
+		</action>
+		
+		<action name="deleteProblemSolvingQuestion" class="com.greenbuds.crunchprep.action.contentcreator.ProblemSolvingAction" method="deleteProblemSolvingQuestion">
+			<result name="success">/pages/contentcreator/questions/quant/problem_solving_table_ajax.jsp</result> 
+			<result name="error">/pages/contentcreator/questions/quant/problem_solving_table_ajax.jsp</result> 
+		</action>  
+		
+		<action name="viewProblemSolving" class="com.greenbuds.crunchprep.action.contentcreator.ProblemSolvingAction" method="viewProblemSolving">
+			<result name="success">/pages/contentcreator/questions/quant/problem_solving_table_ajax.jsp</result> 
+		</action>  
+		
+		<!-- Prroblem Solving end  -->
+ 
+ 
+ 
+	</package>
+
+
+</struts>

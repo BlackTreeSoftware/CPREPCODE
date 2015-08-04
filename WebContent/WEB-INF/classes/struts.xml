@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.multipart.maxSize" value="50000000" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<constant name="struts.action.excludePattern"
+		value=".*unfiltered.*,.*\\.nofilter,/messagebroker/amf*" />
+	
+	<include file="struts-registration-login.xml"></include>	
+	<include file="struts-content-creator.xml"></include>
+	<include file="struts-lesson.xml"></include>
+	<include file="struts-practice-session.xml"></include>
+	<include file="struts-admin.xml"></include>
+	<include file="struts-mentor.xml"></include>
+
+	<include file="struts-skilldata.xml"></include>
+	<include file="struts-user.xml"></include>
+
+	<include file="struts-full-length-test.xml"></include>
+
+	
+	
+	<package name="struts" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types> 
+
+     <interceptors>   
+            <interceptor name="crunchPrepInterceptor" class="com.greenbuds.crunchprep.interceptors.GatePass" />
+            <interceptor-stack name="crunchPrepStack">
+                <interceptor-ref name="crunchPrepInterceptor"/>
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors> 
+        <default-interceptor-ref name="crunchPrepStack"></default-interceptor-ref>
+        
+        <global-results>
+			<result name="sessionexpired">/pages/registration/signin.jsp</result>
+			<result name="null">/pages/registration/signin.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.NullPointerException" result="null" />
+		</global-exception-mappings>
+        
+		<action name="defaultAction">
+		<result type="chain">signin</result>
+		<result name="homepage" type="chain">loginNavigation</result>
+		</action>
+		
+		<action name="homePage" class="com.greenbuds.crunchprep.action.registration.LoginAction" method="userDashboard">
+			<result name="success" type="tiles">/WelcomePage.tiles</result>
+		</action>		
+		<action name="signup">
+			<result>/pages/registration/signup.jsp</result>
+		</action>
+		<action name="refer">
+			<result>/pages/registration/signup.jsp</result>
+		</action>
+		<action name="signin">
+			<result>/pages/registration/signin.jsp</result>
+		</action>
+		<action name="forgotpassword">
+			<result>/pages/registration/forgot_password.jsp</result>
+		</action>	
+	 
+		 <action name="theme">
+			<result>/pages/layout/user_profile.jsp</result>
+		</action>
+		 <action name="getProfilePage">
+			<result type="tiles">/profilepage.tiles</result>
+		</action>
+		 <action name="getTourDemoPage">
+			<!-- <result type="tiles">/tourdemo.tiles</result> -->
+			<result type="tiles">/WelcomePage.tiles</result>
+		</action>
+		
+		 
+		
+		
+	</package>
+	
+
+</struts>

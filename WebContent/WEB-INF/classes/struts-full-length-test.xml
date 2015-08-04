@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd" >
+<struts>
+	<package name="full-length-test" extends="struts" namespace="/">
+
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="full" >
+				<result type="tiles">/startFullTest.tiles</result>
+		</action>
+		<action name="Review">
+		<result type="tiles">/getReviewPage</result>
+		
+		</action>
+		
+		<action name="Get-Full-Session-Retry-Questions"	class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"
+			method="getRetryQuestions">
+			<result type="tiles">/get-full-session-retry-questions.tiles
+			</result>
+           </action>
+		
+		
+ 
+		
+		<action name="nextquestion" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction">
+			<result name="quant_comparison">/pages/user/full-length-test/quant_comparison.jsp</result>
+		    <result name="problem_solving_single">/pages/user/full-length-test/problem_solving_single.jsp</result>
+		    <result name="problem_solving_double">/pages/user/full-length-test/problem_solving_double.jsp</result>
+		    <result name="text_completion_single">/pages/user/full-length-test/textcompletion_single.jsp</result>
+		    <result name="text_completion_double">/pages/user/full-length-test/textcompletion_double.jsp</result>
+		    <result name="text_completion_triple">/pages/user/full-length-test/textcompletion_Triple.jsp</result>
+		    <result name="sentence_equivalence">/pages/user/full-length-test/sentence_equivalence.jsp</result>
+		    <result name="reading_comprehension_single">/pages/user/full-length-test/reading_comprehension_single.jsp</result>
+		    <result name="reading_comprehension_double">/pages/user/full-length-test/reading_comprehension_double.jsp</result>
+		    <result name="data_interpretation_single">/pages/user/full-length-test/data_interpretation_single.jsp</result>
+		    <result name="data_interpretation_double">/pages/user/full-length-test/data_interpretation_double.jsp</result> 
+		    <result name="problem_solving_single_fill">/pages/user/full-length-test/problem_solving_single_fill.jsp</result>
+		    <result name="problem_solving_double_fill">/pages/user/full-length-test/problem_solving_double_fill.jsp</result>	   
+		 	<result name="data_interpretation_single_fill">/pages/user/full-length-test/data_interpretation_single_fill.jsp</result>
+		    <result name="data_interpretation_double_fill">/pages/user/full-length-test/data_interpretation_double_fill.jsp</result>
+		</action>
+		
+
+		  <action name="Start-Full-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="createTestNumber">
+			<result name="success" type="tiles">/startFullTest.tiles</result>
+		  </action>
+		 <!--  <action name="Start-Practice-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="createTestNumber">
+			<result name="success" type="tiles">/startFullTest.tiles</result>
+
+           </action> -->
+
+          <!--  <action name="resume-Practice-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="resumingTest"/>
+			 -->
+
+           
+            <action name="Start-Resume-Test"
+			class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="startResumeTest">
+			<result name="success" type="tiles">/startResumeTest.tiles</result>
+           </action>
+           
+           
+           <action name="Full-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="isResumeTest">
+				<result name="success" type="tiles">/FulllengthStartPage.tiles</result>
+           </action>
+           
+           <action name="updateReason" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="updateReason">				
+           <result name="success" type="tiles">/FulllengthStartPage.tiles</result>
+           </action>
+           
+           
+           
+          <!--  <action name="Practice-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="verifyTest">
+				<result name="new_test" type="tiles">/FulllengthStartPage.tiles</result>
+				<result name="resume" type="tiles">/resumefulllength.tiles</result>
+           </action> -->
+           
+           <action name="Get-Full-Test-Questions-Json" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="gettingQuestionsforFullTest"> 
+           </action>
+           
+          <action name="resume-Practice-Test" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="resumingTest">
+			
+           </action>
+           
+           <action name="fullretryQuestion" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="fullRetrySave"> 		
+		</action>
+           
+           <action name="submitFullTestAnswer" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="submitFullTestAnswer">  
+           </action>
+			<action name="Get-Full-Test-Questions-Display" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="getQuestionTypePages">
+			   <result name="quant_comparison">/pages/user/full-length-test/quant_comparison.jsp</result>
+			    <result name="problem_solving_single">/pages/user/full-length-test/problem_solving_single.jsp</result>
+			    <result name="problem_solving_double">/pages/user/full-length-test/problem_solving_double.jsp</result>
+			    <result name="text_completion_single">/pages/user/full-length-test/textcompletion_single.jsp</result>
+			    <result name="text_completion_double">/pages/user/full-length-test/textcompletion_double.jsp</result>
+			    <result name="text_completion_triple">/pages/user/full-length-test/textcompletion_Triple.jsp</result>
+			    <result name="sentence_equivalence">/pages/user/full-length-test/sentence_equivalence.jsp</result>
+			    <result name="reading_comprehension_single">/pages/user/full-length-test/reading_comprehension_single.jsp</result>
+			    <result name="reading_comprehension_double">/pages/user/full-length-test/reading_comprehension_double.jsp</result>
+			    <result name="data_interpretation_single">/pages/user/full-length-test/data_interpretation_single.jsp</result>
+			    <result name="data_interpretation_double">/pages/user/full-length-test/data_interpretation_double.jsp</result> 
+			    <result name="problem_solving_single_fill">/pages/user/full-length-test/problem_solving_single_fill.jsp</result>
+			    <result name="problem_solving_double_fill">/pages/user/full-length-test/problem_solving_double_fill.jsp</result>	   
+			 	<result name="data_interpretation_single_fill">/pages/user/full-length-test/data_interpretation_single_fill.jsp</result>
+			    <result name="data_interpretation_double_fill">/pages/user/full-length-test/data_interpretation_double_fill.jsp</result>
+			    <result name="reading_comprehension_select_in">/pages/user/full-length-test/reading_comprehension_select_in.jsp</result>
+	        </action> 
+		
+		
+		
+		<action name="one-minute-break-Page">
+		   <result name="success">/pages/user/full-length-test/one_minuteBreakpage.jsp</result>
+		</action>
+		<action name="help" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="oneMinuteBreakData">
+		   <result name="success" type="tiles">/help.tiles</result>
+		</action>
+		<!-- Sahitya -->
+		<action name="startFulllenghtTest" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction">
+		</action>
+		<!-- Review Page actions -->
+		<action name="Review-Page">
+				<result name="success">/pages/user/full-length-test/review-questions.jsp</result>
+		</action>
+		<!-- Review Page actions -->
+		<!-- Exit Section Start -->
+		
+		<action name="Exit-Section-Page">
+				<result name="success">/pages/user/full-length-test/existPage.jsp</result>
+		</action>
+		
+		
+		<!-- Exit Section End -->
+		
+
+
+        <action name="submitFullLengthTest"  class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="submitFullLengthTest">
+        </action>
+         <action name="submitFullLengthTest-Exit-Section-Answers"  class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method=" submitFullLengthTestExistSectionAnswers">
+        </action>
+       
+
+		<action name="marking" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="markingQuestion"/>
+		
+
+		<action name="helppage">
+				<result name="success">/pages/user/full-length-test/help.jsp</result>
+		</action>
+		
+		<action name="quitTest" >
+				<result name="success">/pages/user/full-length-test/quitpage.jsp</result>
+		</action>
+		<action name="quitTestResult" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="quittingTest">
+				
+		</action>
+		<action name="getWhichSection"  class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="generateStartingSection"/>
+		<action name="getNextSectionInstructions" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="updateSectionStatusforNextSection">
+				<result>/pages/user/full-length-test/Instructions.jsp</result>
+		</action>
+		
+		<!-- Reports Start -->
+		<action name="Overall-Performance" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="performanceSummary">
+				<result type="tiles">/getOverallPerformancePage.tiles</result>
+		</action>
+		
+		<action name="Get-Overall-Performance-Data"  class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="overallPerformanceData"/>
+		
+		<action name="Question-Analysis" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="questionAnalysisData">
+				<result type="tiles">/getQuestionAnalysisPage.tiles</result>
+		</action>
+		<!-- Reports End -->
+		
+		<action name="fulllengthTestHistory" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="fulllengthTestHistory" >
+				<result name="success" type="tiles">/fulllengthTestHistory.tiles</result>
+		</action>
+        <action name="fulllengthTestHistoryJsonData" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="fulllengthTestHistoryJsonData" />
+		<action name="fulllengthTestResultPieChartJsonData" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="fulllengthTestResultPieChartJsonData" />
+		<action name="fullLengthTestResultScatterBoobleChadrtJsonData" class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction" method="fullLengthTestResultScatterBoobleChadrtJsonData" />		
+        
+		<action name="full_length_result"	class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="fullLengthResultPage">
+			<result name="success" type="tiles">/fullresultPage.tiles</result>
+		</action>
+		<action name="full_length_resultAjax"	class="com.greenbuds.crunchprep.action.fulllengthtest.FullLengthTestAction"	method="fullLengthResultPage">
+			<result name="success">/pages/user/full-length-test/resultAjax.jsp</result>
+		</action>
+		
+		
+ 
+ 
+ 
+ 
+    </package>  
+    
+    
+  </struts>
+

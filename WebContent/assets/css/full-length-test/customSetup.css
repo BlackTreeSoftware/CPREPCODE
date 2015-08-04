@@ -1,0 +1,148 @@
+@CHARSET "ISO-8859-1";
+
+
+	label { font-family:Verdana, Arial, sans-serif; font-size:14px;}
+
+	.xs-answer-options{ position:fixed; bottom:0px;}					
+
+	.book{margin-top:-14px;}
+	.book-xs{margin-top:-2px; }	
+
+	a.buttonfornotes{ opacity:1; }
+
+	a.buttonfornotes:hover{opacity:1; }		
+
+	.tx-xs{position:fixed; top:80px; width:100%;}
+	
+	.txtp{font-family:Verdana, Arial, sans-serif; font-size:14px;}
+	
+	a.bug{color:#444; font-size:22px;}
+	a.bug:hover{color:#999;}		
+	
+	.head-bar-xs{background-color:#f2f4f8; margin-top:-15px; position:fixed; height:60px; z-index:9999}
+	
+	.note-xs{margin-top:60px; }
+	
+	.btnn{ padding-top:7px; padding-bottom:7px;}
+	
+	.practice-content{font-family:Verdana, Arial, sans-serif; font-size:14px;}
+	.practice-content p{font-size:14px; padding-left:0px; padding-right:0px;}
+	
+	.practice-content h1{font-size:28px; margin-top:0px; margin-bottom:15px; padding-left:20px; padding-right:20px;}
+	.practice-content h2{font-size:24px; margin-top:0px; margin-bottom:10px; padding-left:20px; padding-right:20px;}
+	.practice-content h3{font-size:20px; margin-top:0px; margin-bottom:10px; padding-left:20px; padding-right:20px;}
+	
+	.note_style { z-index:9999;position:absolute; right:0px }
+	.page_style {padding-right:800px;}
+	
+	.txt-main-notes{ width:100%;}
+	
+	.col-sm-95{width:78%}
+	.col-sm-35{width:22%}
+	
+	.col-sm-95-fuller{width:96.5%}
+	.col-sm-35-fuller{width:3.5%}
+	
+	p.question-category {
+		padding: 0;
+		font-size:15px;
+		padding-top:10px;
+	}
+	
+	@media (min-width:1200px) {
+								.btn-chevron{ font-size:180%; padding-right:8px; margin-top:15px;}
+								.btn-test{font-size:12px;}
+								.hr-hidden{ display:none;}
+							  }
+     @media (max-width:1200px) {
+								.btn-chevron{ font-size:150%; margin-left:0px; margin-top:15px;}
+								.col-sm-35-fuller{width:4%}
+								.btn-default{font-size:12px}
+								.btn-test{font-size:12px;}
+							  }							  
+	
+	 @media (max-width:1100px) {
+								.btn-chevron{ font-size:150%; margin-left:-5px; margin-top:15px;}
+								.col-sm-35-fuller{width:4%}
+								.btn-default{font-size:11px}
+								.btn-test{font-size:11px;}
+								
+							  }		
+							  
+		
+	@media (max-width:900px) {								
+		.btn-test{font-size:9px;}
+		p.question-category {
+		padding: 0;
+		font-size:12px;
+	}
+	}
+	 
+	@media (max-width:1200px) {
+		#sparkline canvas {
+			width: 180px!important;
+		}
+	}
+	
+	@media (max-width:960px) {
+		#sparkline {
+			margin-left: -25px!important;
+		}
+		#sparkline canvas {
+			width: 125px!important;
+		}
+	}
+	
+	
+	@media screen and (max-width:800px) {
+										  .practice-content p{font-family:Verdana, Arial, sans-serif; font-size:14px;}
+										  .practice-content h1 , .practice-content h2 , .practice-content h3{ padding-left:0px; padding-right:0px;}
+										  .link-pading-xs-lft{ padding-left:15px;} .link-pading-xs-rht{ padding-right:15px;}
+										  .sider{display:none;}
+										  .col-sm-95{width:100%;}
+										  .btn-chevron{ margin-left:0px; }
+										  label { font-family:Verdana, Arial, sans-serif; font-size:12px;}
+										}
+										
+										
+	
+
+	@media (min-width:800px){
+							 .link-pading-xs-lft{ padding-left:35px;} 
+							 .link-pading-xs-rht{ padding-right:35px;} 
+							 .head-bar-xs{display:none;}
+							 
+							}
+									
+	
+	@media (min-width:481px) {							
+									.xs-options{ display:none}	
+									.xs-answer{display:none}
+									
+		 						  }
+								  
+    @media (max-width:480px) {
+							  	/*.askdoubt-hide{display:none;}*/
+								.askdoubt-hide{display:none}
+								.btn-group{margin-left:-45px;}	
+								.book-xs{ margin-top:-50px; margin-right:-34px;}	
+								#note-icon{ margin-left:-40px;}	
+								
+								.headr-padding{ margin-bottom:40px;}	
+								
+								.practice-content p{font-family:Verdana, Arial, sans-serif; font-size:12px; }
+								
+								.main-nav-test ul li{ list-style:none; }
+								
+								.answers-md{display:none;}	
+								.flag-hide{display:none}	
+					         }	
+							 
+    @media (max-width:320px) {
+							  	.btn-group{margin-left:-15px;}	
+								.book-xs{ margin-top:-50px; margin-right:-25px;}
+								.btn-test{ font-size:9px;}
+								
+					         }											 
+							 								
+  
