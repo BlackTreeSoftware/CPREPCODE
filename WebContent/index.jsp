@@ -15,7 +15,7 @@ function pageLoaded(){
 </script>
 </head>
 <body onload="pageLoaded()">
-<h2 id="matter"> Hello Every Body</h2> 
+<h2 id="matter"> Hello Every one</h2> 
 
 <form action="defaultAction.action" id="loginForm"/>
 </body>
